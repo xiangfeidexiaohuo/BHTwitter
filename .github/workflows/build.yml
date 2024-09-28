@@ -27,6 +27,7 @@ on:
           - sideloaded
           - trollstore
           - rootless
+          - roothide
       commit_id:
         description: "(Optional) Commit ID to build at"
         default: ""
@@ -72,7 +73,7 @@ jobs:
       - name: Download Theos
         uses: actions/checkout@v4
         with:
-          repository: theos/theos
+          repository: roothide/theos
           ref: master
           path: theos
           submodules: recursive
