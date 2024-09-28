@@ -256,9 +256,10 @@ static UIFont *TwitterChirpFont(TwitterFontStyle style) {
         
         // developer section
         PSSpecifier *bandarHL = [self newHBTwitterCellWithTitle:@"BandarHelal" twitterUsername:@"BandarHL" customAvatarURL:@"https://unavatar.io/twitter/BandarHL"];
-        PSSpecifier *tipJar = [self newHBLinkCellWithTitle:@"Tip Jar" detailTitle:@"Donate Via Paypal" url:@"https://www.paypal.me/BandarHL"];
-        PSSpecifier *buymecoffee = [self newHBLinkCellWithTitle:@"Buy Me A Coffee" detailTitle:nil url:@"https://www.buymeacoffee.com/bandarHL"];
-        PSSpecifier *sourceCode = [self newHBLinkCellWithTitle:@"BHTwitter" detailTitle:@"Code source of BHTwitter" url:@"https://github.com/BandarHL/BHTwitter/"];
+        PSSpecifier *tipJar = [self newHBLinkCellWithTitle:@"打赏" detailTitle:@"贝宝捐赠" url:@"https://www.paypal.me/BandarHL"];
+        PSSpecifier *buymecoffee = [self newHBLinkCellWithTitle:@"咖啡" detailTitle:nil url:@"https://www.buymeacoffee.com/bandarHL"];
+        PSSpecifier *sourceCode = [self newHBLinkCellWithTitle:@"开源" detailTitle:@"BHTwitter代码开源" url:@"https://github.com/BandarHL/BHTwitter/"];
+        PSSpecifier *daodao = [self newHBLinkCellWithTitle:@"🇨🇳刀刀" detailTitle:@"刀刀源" url:@"https://xiangfeidexiaohuo.github.io/"];
 
         // people who contributed section
         PSSpecifier *actuallyaridan = [self newHBTwitterCellWithTitle:@"aridan" twitterUsername:@"actuallyaridan" customAvatarURL:@"https://avatars.githubusercontent.com/u/96298432?v=4"];
@@ -323,12 +324,13 @@ static UIFont *TwitterChirpFont(TwitterFontStyle style) {
             tipJar,
             buymecoffee,
             sourceCode,
+            daodao,
 
             other, // 6
             actuallyaridan,
             tulugaak,
             timi2506,
-            nyathea,
+            nyathea
         ]];
         
         [self collectDynamicSpecifiersFromArray:_specifiers];
@@ -490,7 +492,7 @@ static UIFont *TwitterChirpFont(TwitterFontStyle style) {
     fontPicker.delegate = self;
     
     if (self.twAccount != nil) {
-        [fontPicker.navigationItem setTitleView:[objc_getClass("TFNTitleView") titleViewWithTitle:@"Choose Font" subtitle:self.twAccount.displayUsername]];
+        [fontPicker.navigationItem setTitleView:[objc_getClass("TFNTitleView") titleViewWithTitle:@"选择字体" subtitle:self.twAccount.displayUsername]];
     }
     [self.navigationController pushViewController:fontPicker animated:true];
 }
@@ -504,7 +506,7 @@ static UIFont *TwitterChirpFont(TwitterFontStyle style) {
     fontPicker.delegate = self;
     
     if (self.twAccount != nil) {
-        [fontPicker.navigationItem setTitleView:[objc_getClass("TFNTitleView") titleViewWithTitle:@"Choose Font" subtitle:self.twAccount.displayUsername]];
+        [fontPicker.navigationItem setTitleView:[objc_getClass("TFNTitleView") titleViewWithTitle:@"选择字体" subtitle:self.twAccount.displayUsername]];
     }
     [self.navigationController pushViewController:fontPicker animated:true];
 }
@@ -543,7 +545,7 @@ static UIFont *TwitterChirpFont(TwitterFontStyle style) {
     UITableViewCell *specifierCell = [specifier propertyForKey:PSTableCellKey];
     PSSpecifier *selectionSpecifier = [self specifierForID:@"Select URL host"];
 
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"BHTwitter" message:@"please select what host you prefer" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"BHTwitter" message:@"请选择喜欢的链接格式" preferredStyle:UIAlertControllerStyleActionSheet];
 
     if (alert.popoverPresentationController != nil) {
         CGFloat midX = CGRectGetMidX(specifierCell.frame);

@@ -6,6 +6,7 @@
 //
 
 #import "BHTBundle.h"
+#include <roothide.h>
 
 @interface BHTBundle ()
 @property (nonatomic, strong) NSBundle *mainBundle;
@@ -18,10 +19,10 @@
     dispatch_once(&onceToken, ^{
         NSFileManager *fileManager = [NSFileManager defaultManager];
         NSURL *bundlePath = [NSURL new];
-        if ([fileManager fileExistsAtPath:@"/Library/Application Support/BHT/BHTwitter.bundle"]) {
-            bundlePath = [NSURL fileURLWithPath:@"/Library/Application Support/BHT/BHTwitter.bundle"];
-        } else if ([fileManager fileExistsAtPath:@"/var/jb/Library/Application Support/BHT/BHTwitter.bundle"]) {
-            bundlePath = [NSURL fileURLWithPath:@"/var/jb/Library/Application Support/BHT/BHTwitter.bundle"];
+        if ([fileManager fileExistsAtPath:jbroot(@"/Library/Application Support/BHT/BHTwitter.bundle")]) {
+            bundlePath = [NSURL fileURLWithPath:jbroot(@"/Library/Application Support/BHT/BHTwitter.bundle")];
+        } else if ([fileManager fileExistsAtPath:jbroot(@"/Library/Application Support/BHT/BHTwitter.bundle")]) {
+            bundlePath = [NSURL fileURLWithPath:jbroot(@"/Library/Application Support/BHT/BHTwitter.bundle")];
         } else {
             bundlePath = [[NSBundle mainBundle] URLForResource:@"BHTwitter" withExtension:@"bundle"];
         }

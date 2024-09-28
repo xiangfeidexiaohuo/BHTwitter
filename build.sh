@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LONG=sideloaded:,rootless:,trollstore
+LONG=sideloaded:,rootless:,roothide:,trollstore
 OPTS=$(getopt -a weather --longoptions "$LONG" -- "$@")
 
 while :; do
@@ -36,6 +36,17 @@ while :; do
       make clean
       rm -rf .theos
       export THEOS_PACKAGE_SCHEME=rootless
+      make package
+
+      echo -e '\033[1m\033[32mDone, thanks for using BHTwitter.\033[0m'
+      break
+      ;;
+    --roothide)
+      echo -e '\033[1m\033[32mBuilding BHTwitter project for RootHide.\033[0m'
+
+      make clean
+      rm -rf .theos
+      export THEOS_PACKAGE_SCHEME=roothide
       make package
 
       echo -e '\033[1m\033[32mDone, thanks for using BHTwitter.\033[0m'
