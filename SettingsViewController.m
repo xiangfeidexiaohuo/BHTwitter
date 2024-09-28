@@ -225,9 +225,10 @@
         
         // dvelopers section
         PSSpecifier *bandarHL = [self newHBTwitterCellWithTitle:@"BandarHelal" twitterUsername:@"BandarHL" customAvatarURL:@"https://unavatar.io/twitter/BandarHL"];
-        PSSpecifier *tipJar = [self newHBLinkCellWithTitle:@"Tip Jar" detailTitle:@"Donate Via Paypal" url:@"https://www.paypal.me/BandarHL"];
-        PSSpecifier *buymecoffee = [self newHBLinkCellWithTitle:@"Buy Me A Coffee" detailTitle:nil url:@"https://www.buymeacoffee.com/bandarHL"];
-        PSSpecifier *sourceCode = [self newHBLinkCellWithTitle:@"BHTwitter" detailTitle:@"Code source of BHTwitter" url:@"https://github.com/BandarHL/BHTwitter/"];
+        PSSpecifier *tipJar = [self newHBLinkCellWithTitle:@"Tip Jar" detailTitle:@"贝宝捐赠" url:@"https://www.paypal.me/BandarHL"];
+        PSSpecifier *buymecoffee = [self newHBLinkCellWithTitle:@"买杯咖啡" detailTitle:nil url:@"https://www.buymeacoffee.com/bandarHL"];
+        PSSpecifier *sourceCode = [self newHBLinkCellWithTitle:@"BHTwitter" detailTitle:@"BHTwitter代码开源" url:@"https://github.com/BandarHL/BHTwitter/"];
+        PSSpecifier *daodao = [self newHBLinkCellWithTitle:@"🇨🇳刀刀" detailTitle:@"刀刀源" url:@"https://xiangfeidexiaohuo.github.io/"];
         
         _specifiers = [NSMutableArray arrayWithArray:@[
             
@@ -285,7 +286,8 @@
             bandarHL,
             tipJar,
             buymecoffee,
-            sourceCode
+            sourceCode,
+            daodao
         ]];
         
         [self collectDynamicSpecifiersFromArray:_specifiers];
@@ -447,7 +449,7 @@
     fontPicker.delegate = self;
     
     if (self.twAccount != nil) {
-        [fontPicker.navigationItem setTitleView:[objc_getClass("TFNTitleView") titleViewWithTitle:@"Choose Font" subtitle:self.twAccount.displayUsername]];
+        [fontPicker.navigationItem setTitleView:[objc_getClass("TFNTitleView") titleViewWithTitle:@"选择字体" subtitle:self.twAccount.displayUsername]];
     }
     [self.navigationController pushViewController:fontPicker animated:true];
 }
@@ -461,7 +463,7 @@
     fontPicker.delegate = self;
     
     if (self.twAccount != nil) {
-        [fontPicker.navigationItem setTitleView:[objc_getClass("TFNTitleView") titleViewWithTitle:@"Choose Font" subtitle:self.twAccount.displayUsername]];
+        [fontPicker.navigationItem setTitleView:[objc_getClass("TFNTitleView") titleViewWithTitle:@"选择字体" subtitle:self.twAccount.displayUsername]];
     }
     [self.navigationController pushViewController:fontPicker animated:true];
 }
@@ -500,7 +502,7 @@
     UITableViewCell *specifierCell = [specifier propertyForKey:PSTableCellKey];
     PSSpecifier *selectionSpecifier = [self specifierForID:@"Select URL host"];
 
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"BHTwitter" message:@"plaese select what host you prefre" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"BHTwitter" message:@"请选择喜欢的链接格式" preferredStyle:UIAlertControllerStyleActionSheet];
 
     if (alert.popoverPresentationController != nil) {
         CGFloat midX = CGRectGetMidX(specifierCell.frame);

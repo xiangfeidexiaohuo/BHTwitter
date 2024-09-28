@@ -1,9 +1,11 @@
-Package: com.bandarhl.bhtwitter
-Name: BHTwitter
+Package: com.dao.bhtwitter
+Name: BHTwitter 中文版(rootless)
 Version: 4.3
 Architecture: iphoneos-arm
-Description: Awesome tweak for Twitter
+Description: BHTwitter中文修复优化版，推特的综合功能性插件，插件选项位于推特设置顶部。
 Maintainer: Bandar Alruwaili
 Author: Bandar Alruwaili
-Section: Tweaks
+Section: 嗨-工具
 Depends: mobilesubstrate, ws.hbang.common
+Conflicts: com.bandarhl.rootless.bhtwitter, com.bandarhl.bhtwitter, com.daodao.rootless.bhtwitter, com.hk.BHTwitter.cn
+
