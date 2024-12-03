@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.headerLabel = [[UILabel alloc] init];
-    self.headerLabel.text = [[BHTBundle sharedBundle] localizedStringForKey:@"APP_ICON_HEADER_TITLE"];
+    self.headerLabel.text = [[BHTBundle sharedBundle] localizedStringForKey:@"THEME_OPTION_CHOICE"];
     self.headerLabel.textColor = [UIColor secondaryLabelColor];
     self.headerLabel.numberOfLines = 0;
     self.headerLabel.font = [UIFont systemFontOfSize:15];

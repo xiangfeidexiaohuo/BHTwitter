@@ -45,8 +45,8 @@ static void batchSwizzlingOnClass(Class cls, NSArray<NSString*>*origSelectors, I
 %hook T1AppDelegate
 - (_Bool)application:(UIApplication *)application didFinishLaunchingWithOptions:(id)arg2 {
     %orig;
-    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"FirstRun_4.3"]) {
-        [[NSUserDefaults standardUserDefaults] setValue:@"1strun" forKey:@"FirstRun_4.3"];
+    if (![[NSUserDefaults standardUserDefaults] objectForKey:@"FirstRun_4.4"]) {
+        [[NSUserDefaults standardUserDefaults] setValue:@"1strun" forKey:@"FirstRun_4.4"];
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"dw_v"];
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"hide_promoted"];
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"voice"];

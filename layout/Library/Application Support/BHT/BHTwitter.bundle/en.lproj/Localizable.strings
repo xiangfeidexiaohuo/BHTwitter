@@ -116,6 +116,7 @@
 "READER_MODE_OPTION_DETAIL_TITLE" = "Enable reader mode in threads.";
 
 "THEME_OPTION_TITLE" = "Theme";
+"THEME_OPTION_CHOICE"="Choose a color theme for the application.";
 "THEME_OPTION_DETAIL_TITLE" = "Choose a theme color for you Twitter experience that can only be seen by you.";
 "THEME_OPTION_1" = "Blue";
 "THEME_OPTION_2" = "Yellow";
@@ -135,6 +136,7 @@
 "CUSTOM_TAB_BAR_OPTION_5" = "Notifications";
 "CUSTOM_TAB_BAR_OPTION_6" = "Messages";
 "CUSTOM_TAB_BAR_OPTION_7" = "Grok";
+"CUSTOM_TAB_BAR_OPTION_8" = "Video";
 
 "TWITTER_BLUE_SECTION_FOOTER_TITLE" = "You may need to restart Twitter app to apply changes.";
 

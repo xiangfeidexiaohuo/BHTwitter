@@ -1,6 +1,7 @@
 ARCHS = arm64
 TARGET := iphone:clang:latest:14.0
 INSTALL_TARGET_PROCESSES = Twitter
+
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = BHTwitter

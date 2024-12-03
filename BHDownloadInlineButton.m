@@ -258,7 +258,11 @@ static const NSString *KEY_HIT_TEST_EDGE_INSETS = @"HitTestEdgeInsets";
     return 2;
 }
 
-- (double)extraWidth {
+- (CGFloat)extraWidth {
+     return 40;
+}
+ 
+- (CGFloat)extraWidthWithStyle {
     return 40;
 }
 
